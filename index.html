@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araza</title>
+    <!-- CSS -->
+    <link href="dist/output.css" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <!-- -english mode/bahasa? -->
+    <!-- -text rotator? -->
+    <!--  -background text? -->
+    <!-- -see more animasi? -->
+    <!-- - cek box navbar? -->
+    <!--  finishing -->
+
+</head>
+
+<body>
+    <!-- header start -->
+    <header class=" bg-transparent absolute top-0 left-0 w-full flex items-center 
+    z-10 ">
+        <div class=" container">
+            <div class=" flex items-center justify-between relative lg:mt-4">
+                <div class=" px-8 lg:px-2" data-aos="fade-right" data-aos-duration="1000">
+                    <a href="#Hero" class=" font-bold text-xl tracking-wide text-black
+                block py-2 lg:text-3xl lg:tracking-wider dark:text-white">AraZaynu</a>
+                </div>
+                <div class=" flex items-center px-8 lg:px-2 " data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    <button id="hamburger" name="hamburger" type="button"
+                        class="block absolute right-8 overflow-hidden w-12 lg:hidden">
+                        <span class="hamburger transition duration-300 ease-in-out origin-top-right"></span>
+                        <span class="hamburger transition duration-300 ease-in-out"></span>
+                        <span class="hamburger transition duration-300 ease-in-out origin-bottom-right"></span>
+                    </button>
+
+                    <nav id="nav-menu"
+                        class=" absolute py-5 bg-white dark:bg-black lg:dark:bg-transparent shadow-xl rounded-md max-w-[250px] w-44 right-8 scale-0 lg:py-0 lg:scale-100 top-full transition duration-300 ease-out lg:block lg:static lg:w-full lg:bg-transparent lg:max-w-full lg:top-full lg:shadow-none lg:rounded-none  dark:shadow-slate-500">
+                        <ul class=" block lg:flex font-semibold">
+                            <li class="group">
+                                <a href="#Hero"
+                                    class="text-base lg:text-lg text-teal-900 py-4 mx-8 flex group-hover:text-yellow-400 hove dark:text-yellow-400 transition hover:dark:text-white duration-200 ">Beranda</a>
+                            </li>
+                            <li class="group">
+                                <a href="#About"
+                                    class="text-base lg:text-lg text-teal-900 py-4 mx-8 flex group-hover:text-yellow-400 dark:text-yellow-400 hover:dark:text-white transition duration-200 ">Tentang
+                                    Saya</a>
+                            </li>
+                            <li class="group">
+                                <a href="#Latest"
+                                    class="text-base lg:text-lg text-teal-900 py-4 mx-8 flex group-hover:text-yellow-400 dark:text-yellow-400 hover:dark:text-white  transition duration-200 ">Galeri
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#Skill"
+                                    class="text-base lg:text-lg text-teal-900 py-4 mx-8 flex group-hover:text-yellow-400 dark:text-yellow-400 hover:dark:text-white  transition duration-200 ">Skill
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#Contact"
+                                    class="text-base lg:text-lg text-teal-900 py-4 mx-8 flex group-hover:text-yellow-400 dark:text-yellow-400 hover:dark:text-white  transition duration-200 ">Hubungi
+                                    Saya</a>
+                            </li>
+
+                            <ul class="flex ml-8 my-3 pb-4">
+                                <li class="group">
+                                    <!-- instagram -->
+                                    <a href="https://www.instagram.com/arazaynu/" target="_blank"
+                                        class="group w-9 h-9 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                        <svg role="img" width="20" class=" fill-current" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title>Instagram</title>
+                                            <path
+                                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="group">
+                                    <!-- Discord -->
+                                    <a href="https://discord.gg/DJmpVW9W" target="_blank"
+                                        class="group w-9 h-9 rounded-full flex dark:text-white justify-center items-center text-black group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                        <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title>Discord</title>
+                                            <path
+                                                d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="group">
+                                    <!-- Github -->
+                                    <a href="https://github.com/AraZaynu" target="_blank"
+                                        class="group w-9 h-9 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                        <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title>GitHub</title>
+                                            <path
+                                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="flex my-3">
+                                <div class="flex hover:animate-pulse">
+                                    <input type="checkbox" name="mode" id="mode" class="hidden ">
+                                    <div class="flex ml-8 dark:text-white">
+                                        <label for="mode">
+                                            <ion-icon name="bulb" size="large" class="cursor-pointer "></ion-icon>
+                                    </div>
+                                    </label>
+                                    <div><label for="mode">
+                                            <span
+                                                class="uppercase font-semibold font-sm tracking-wider cursor-pointer dark:text-white dark:decoration-yellow-400 underline decoration-black underline-offset-[12px]">Tema
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- Hero Section start -->
+    <section id="Hero" class="dark:bg-black">
+        <div class="">
+            <div class="flex">
+                <div data-aos="zoom in" data-aos-duration="1000" data-aos-delay="700"
+                    class="mt-12 my-10 lg:my-12 lg:mt-24 lg:mx-64 ">
+                    <img src="src/2g.png" alt="hero" id="img-mode" class="dark:hidden">
+                    <img src="src/2bgyellowg.png" alt="hero" id="img-mode" class="hidden dark:block">
+                </div>
+                <div data-aos="zoom in" data-aos-duration="1000" data-aos-delay="1000"
+                    class=" absolute top-36 left-10 font-bold text-2xl
+                    text-slate-50 hover:dark:decoration-teal-900 w-30 self-center underline decoration-teal-900 dark:decoration-yellow-400 hover:decoration-yellow-400 transition duration-200 ease-in-out lg:top-72 lg:left-96 lg:text-5xl">
+                    <a href="#">
+                        <h1>Danish Ara <br> Zaynu</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+    <div class="absolute w-[2px] lg:w-[100px] h-[60px] lg:h-[4px] bg-slate-400 m-auto left-44 opacity-75 hidden">
+    </div>
+    <!-- about section start -->
+    <section id="About" class=" pt-20 lg:pt-32 pb-32 dark:bg-black">
+        <div class=" container">
+            <div class="flex flex-wrap">
+                <div class=" w-full px-8 pb-16 " data-aos="fade-in">
+                    <h4
+                        class=" text-center font-bold text-3xl pb-2 text-black dark:text-white lg:text-6xl lg:tracking-wide">
+                        Selamat
+                        Datang</h4>
+                    <p
+                        class=" font-medium text-sm text-black dark:text-white leading-normal mb-8 lg:text-xl text-center">
+                        Hallo, saya
+                        Danish. Anak sekolah/pelajar</p>
+                    <div
+                        class=" w-[50px] lg:w-[100px] h-[2.5px] lg:h-[4px] block bg-teal-900 dark:bg-yellow-400 m-auto ">
+                    </div>
+                </div>
+                <div class="w-full px-8 mb-10 lg:w-1/2" data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-offset="150">
+                    <h2 class="font-semibold text-teal-900 dark:text-yellow-400 text-xl pb-2 lg:text-3xl">Tentang Saya
+                    </h2>
+                    <P
+                        class=" leading-tight font-medium text-sm text-slate-700 dark:text-slate-300 max-w-xl lg:text-lg">
+                        Perkenalkan nama
+                        saya Danish Ara Zaynu,
+                        Saya tinggal Ciamis, Jawa Barat. Saat ini berumur 14 tahun. Saat ini duduk di bangku SMP, saya
+                        siswa di Sekolah Menengah Pertama 1 Cikoneng. Saat ini saya fokus Belajar, dan memperdalam web
+                        development, HTML, CSS, TailwindCSS, Javascript, dan lain lain.</P>
+                    <br>
+                    <P
+                        class=" leading-tight font-medium text-sm text-slate-700 dark:text-slate-300 max-w-xl lg:text-lg">
+                        Saya suka Bermain
+                        game diantaranya Mineraft, Valorant, Growtopia,dll.. Untuk Growtopia kamu bisa berteman dengan
+                        saya, datang ke world ARAZAYNU, Growid AraZaynu.</P>
+                </div>
+                <div class=" w-full px-8 mb-10 lg:w-1/2">
+                    <h3 class="font font-semibold text-teal-900 dark:text-yellow-400 text-xl pb-2 lg:text-3xl"
+                        data-aos="fade-in" data-aos-duration="1000" data-aos-offset="150">Ikuti Saya</h3>
+                    <p class=" leading-tight font-medium text-sm text-slate-700 dark:text-slate-300 max-w-xl pb-4 lg:text-lg"
+                        data-aos="fade-in" data-aos-duration="1000" data-aos-offset="150">Anda bisa
+                        berteman
+                        dan menghubungi dengan saya melalui sosial media dibawah ini
+
+                    </p>
+                    <div class=" flex items-center ">
+                        <!-- instagram -->
+                        <div class="group">
+                            <a href="https://www.instagram.com/arazaynu/" target="_blank" data-aos="fade-in"
+                                data-aos-duration="1000" data-aos-offset="" data-aos-delay="700"
+                                class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Instagram</title>
+                                    <path
+                                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Discord -->
+                        <div class="group">
+                            <a href="https://discord.gg/DJmpVW9W" target="_blank" data-aos="fade-in"
+                                data-aos-duration="1000" data-aos-offset="" data-aos-delay="800"
+                                class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>Discord</title>
+                                    <path
+                                        d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- Github -->
+                        <div class="group">
+                            <a href="https://github.com/AraZaynu" target="_blank" data-aos="fade-in"
+                                data-aos-duration="1000" data-aos-offset="" data-aos-delay="900"
+                                class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-200 ease-in-out">
+                                <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <title>GitHub</title>
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- Artikel start -->
+    <section id="Latest" class=" lg:pt-32 pt-32 pb-16 bg-teal-900">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-8 " data-aos="fade-in" data-aos-offset="150">
+                    <h1 class=" font-semibold tracking-wider text-3xl text-yellow-400 mb-4 lg:text-6xl">Danish Terbaru
+                    </h1>
+                    <p class=" font-medium text-sm text-slate-200 leading-normal mb-8 lg:text-lg">Galeri, Project, Post,
+                        Artikel, Blog, Berita, dll..</p>
+                    <div class=" w-[50px] lg:w-[100px] h-[2.5px] lg:h-[4px] block bg-yellow-400 m-auto">
+                    </div>
+                </div>
+
+                <div class="w-full px-5 flex flex-wrap justify-center xl:w-11/12 xl:mx-auto">
+                    <!-- artikel 1 -->
+                    <div class=" mb-12 p-5 lg:w-1/3 " data-aos="fade-right" data-aos-offset="150">
+                        <div
+                            class=" overflow-hidden bg-white shadow-lg hover:ring-2 ring-yellow-400 transition duration-100 ease-in-out">
+                            <img src="src/savegamemc.png" alt="hero" width="100%">
+                            <h1 class="px-4 pt-2 font-semibold text-sm text-slate-400 tracking-wide uppercase">P E R M A
+                                I N A N
+                            </h1>
+                            <a href="https://drive.google.com/file/d/1omGyzs6VPzeJzBdHAmj4uQwXltsf1QlN/view?usp=sharing"
+                                target="_blank">
+                                <h3 class=" px-4 pt-2 mb-6 font-bold text-lg tracking-wide leading-tight lg:text-xl">
+                                    Mineraft <br> Dunia Survival Saya
+                                </h3>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1omGyzs6VPzeJzBdHAmj4uQwXltsf1QlN/view?usp=sharing"
+                                target="_blank"
+                                class=" px-4 font-semibold text-sm tracking-wider underline decoration-white hover:decoration-yellow-400 transition duration-200 ease-in-out uppercase">
+                                <ion-icon name="download-outline"></ion-icon> Download
+                                <br><br>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- artikel 2 -->
+                    <div class=" mb-12 p-5 lg:w-1/3" data-aos="fade-up" data-aos-offset="150">
+                        <div
+                            class=" overflow-hidden bg-white shadow-lg hover:ring-2 ring-yellow-400 transition duration-100 ease-in-out">
+                            <img src="src/landingpage.jpg" alt="hero" width="100%">
+                            <h1 class="px-4 pt-2 font-semibold text-sm text-slate-400 tracking-wide uppercase">T E K N O
+                                L O G I
+                            </h1>
+                            <a href="https://github.com/AraZaynu" target="_blank">
+                                <h3 class=" px-4 pt-2 mb-6 font-bold text-lg tracking-wide leading-tight lg:text-xl">
+                                    Web Development <br> Landing Page
+                                </h3>
+                            </a>
+                            <a href="https://github.com/AraZaynu" target="_blank"
+                                class=" px-4 font-semibold text-sm tracking-wider underline decoration-white hover:decoration-yellow-400 transition duration-200 ease-in-out uppercase">
+                                <ion-icon name="images-outline"></ion-icon> Lihat
+                                <br><br>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- artikel 3 -->
+                    <div class=" mb-12 p-5 lg:w-1/3" data-aos="fade-right" data-aos-offset="150">
+                        <div
+                            class=" overflow-hidden bg-white shadow-lg hover:ring-2 ring-yellow-400 transition duration-100 ease-in-out">
+                            <img src="src/code.jpg" alt="hero" width="100%">
+                            <h1 class="px-4 pt-2 font-semibold text-sm text-slate-400 tracking-wide uppercase">T E K
+                                N O
+                                L O G I
+                            </h1>
+                            <a href="https://coggle.it/diagram/YA5j5BfeOvNuaqYu/t/jalur-belajar-web-development-2021-untuk-pemula/ed6061d5440b5a1a42737fb2f52ac42eb9c516a325ab949a57ee697eaed146c5"
+                                target="_blank">
+                                <h3 class=" px-4 pt-2 mb-6 font-bold text-lg tracking-wide leading-tight lg:text-xl">
+                                    HTML & CSS <br>
+                                    <hr> Belajar Web Development</h3>
+                            </a>
+                            <a href="https://coggle.it/diagram/YA5j5BfeOvNuaqYu/t/jalur-belajar-web-development-2021-untuk-pemula/ed6061d5440b5a1a42737fb2f52ac42eb9c516a325ab949a57ee697eaed146c5"
+                                target="_blank"
+                                class=" px-4 font-semibold text-sm tracking-wider underline decoration-white hover:decoration-yellow-400 transition duration-200 ease-in-out uppercase">
+                                <ion-icon name="compass-outline" size="small"></ion-icon> Lihat
+                                <br><br>
+                            </a>
+                        </div>
+                    </div>
+                    <span id="more-artikel" class="hidden flex-wrap" data-aos="fade-right" data-aos-offset="150">
+                        <!-- artikel 4 -->
+                        <div class=" mb-12 p-5 lg:w-1/3">
+                            <div
+                                class=" overflow-hidden bg-white shadow-lg hover:ring-2 ring-yellow-400 transition duration-100 ease-in-out">
+                                <img src="src/dc2.png" alt="hero" width="100%">
+                                <h1 class="px-4 pt-2 font-semibold text-sm text-slate-400 tracking-wide uppercase">S O S
+                                    I
+                                    A L
+                                </h1>
+                                <a href="https://discord.gg/DJmpVW9W" target="_blank">
+                                    <h3
+                                        class=" px-4 pt-2 mb-6 font-bold text-lg tracking-wide leading-tight lg:text-xl">
+                                        Discord <br> Gabung Server AZ
+                                    </h3>
+                                </a>
+                                <a href="https://discord.gg/DJmpVW9W" target="_blank"
+                                    class=" px-4 font-semibold text-sm tracking-wider underline decoration-white hover:decoration-yellow-400 transition duration-200 ease-in-out uppercase">
+                                    <ion-icon name="log-in-outline"></ion-icon> Gabung
+                                    <br><br>
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                    <button id="show-more" data-aos="fade-up" data-aos-offset="150"
+                        class="text-white underline decoration-yellow-400 hover:text-yellow-400 hover:decoration-white transition duration-300 ease-in-out text-sm font-semibold tracking-widest lg:text-base">=
+                        SEE MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Artikel end -->
+
+    <!-- skill start -->
+    <section id="Skill" class=" pt-20 pb-20 bg-black">
+        <div class="container">
+            <div class="w-full px-8">
+                <div class="max-w-xl mx-auto text-center mb-8 " data-aos="fade-in" data-aos-offset="150">
+                    <h1 class=" font-semibold tracking-wider text-3xl text-white mb-4 lg:text-6xl">Skill
+                    </h1>
+                    <p class=" font-medium text-sm text-slate-300 leading-normal mb-8 lg:text-lg">Software yang biasa
+                        saya gunakan di web development.</p>
+                    <div class=" w-[50px] lg:w-[100px] h-[2.5px] lg:h-[4px] block bg-yellow-400 m-auto mb-12">
+                    </div>
+                </div>
+                <div class="w-full px-2 flex flex-wrap justify-center text-slate-300">
+                    <!-- skill 1 -->
+                    <!-- Photoshop -->
+                    <a href="#" data-aos="fade-right" data-aos-offset="150" target="_blank"
+                        class=" w-9 h-9 mx-5 my-3 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                        <svg role="img" width="50" class=" fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Adobe Photoshop</title>
+                            <path
+                                d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49 0-.68.01-.2-.01-.34 0-.41.01v3.36c.14.01.27.02.39.02h.53c.39 0 .78-.06 1.15-.18.32-.09.6-.28.82-.53.21-.25.31-.59.31-1.03.01-.31-.07-.62-.23-.89-.17-.26-.41-.46-.7-.57zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.899c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zm-7.391 11.65c-.399.56-.959.98-1.609 1.22-.68.25-1.43.34-2.25.34-.24 0-.4 0-.5-.01s-.24-.01-.43-.01v3.209c.01.07-.04.131-.11.141H5.52c-.08 0-.12-.041-.12-.131V6.42c0-.07.03-.11.1-.11.17 0 .33 0 .56-.01.24-.01.49-.01.76-.02s.56-.01.87-.02c.31-.01.61-.01.91-.01.82 0 1.5.1 2.06.31.5.17.96.45 1.34.82.32.32.57.71.73 1.14.149.42.229.85.229 1.3.001.86-.199 1.57-.6 2.13zm7.091 3.89c-.28.4-.671.709-1.12.891-.49.209-1.09.318-1.811.318-.459 0-.91-.039-1.359-.129-.35-.061-.7-.17-1.02-.32-.07-.039-.121-.109-.111-.189v-1.74c0-.029.011-.07.041-.09.029-.02.06-.01.09.01.39.23.8.391 1.24.49.379.1.779.15 1.18.15.38 0 .65-.051.83-.141.16-.07.27-.24.27-.42 0-.141-.08-.27-.24-.4-.16-.129-.489-.279-.979-.471-.51-.18-.979-.42-1.42-.719-.31-.221-.569-.51-.761-.85-.159-.32-.239-.67-.229-1.021 0-.43.12-.84.341-1.21.25-.4.619-.72 1.049-.92.469-.239 1.059-.349 1.769-.349.41 0 .83.03 1.24.09.3.04.59.12.86.23.039.01.08.05.1.09.01.04.02.08.02.12v1.63c0 .04-.02.08-.05.1-.09.02-.14.02-.18 0-.3-.16-.62-.27-.96-.34-.37-.08-.74-.13-1.12-.13-.2-.01-.41.02-.601.07-.129.03-.24.1-.31.2-.05.08-.08.18-.08.27s.04.18.101.26c.09.11.209.2.34.27.229.12.47.23.709.33.541.18 1.061.43 1.541.73.33.209.6.49.789.83.16.318.24.67.23 1.029.011.471-.129.94-.389 1.331z" />
+                        </svg>
+                    </a>
+                    <!-- skill 2 -->
+                    <!-- Git -->
+                    <a href="#" data-aos="fade-down" data-aos-offset="150" target="_blank"
+                        class=" w-9 h-9 mx-5 my-3 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                        <svg role="img" width="50" class=" fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Git</title>
+                            <path
+                                d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187" />
+                        </svg>
+                    </a>
+                    <!-- skill 3 -->
+                    <!-- html -->
+                    <a href="#" data-aos="fade-left" data-aos-offset="150" target="_blank"
+                        class=" w-9 h-9 mx-5 my-3 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                        <svg role="img" width="50" class=" fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>HTML5</title>
+                            <path
+                                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
+                        </svg>
+                    </a>
+                    <!-- skill 4 -->
+                    <!-- css -->
+                    <a href="#" data-aos="fade-up" data-aos-offset="150" target="_blank"
+                        class=" w-9 h-9 mx-5 my-3 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                        <svg role="img" width="50" class=" fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>CSS3</title>
+                            <path
+                                d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+                        </svg>
+                    </a>
+                    <!-- skill 5 -->
+                    <!-- tailwindcss -->
+                    <a href="#" data-aos="fade-up" data-aos-offset="150" target="_blank"
+                        class=" w-9 h-9 mx-5 my-3 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                        <svg role="img" width="50" class=" fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Tailwind CSS</title>
+                            <path
+                                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                        </svg>
+                    </a>
+                    <!-- skill 6 -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- skill end -->
+
+    <!-- Contact start -->
+    <section id="Contact" class="pt-32 pb-32 dark:bg-black">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-8" data-aos="fade-in" data-aos-offset="150">
+                    <h1 class=" font-semibold tracking-wider text-3xl text-black dark:text-white mb-4 lg:text-6xl">
+                        Hubungi Saya
+                    </h1>
+                    <div class=" group flex mx-auto justify-center items-center lg:mb-2">
+                        <!-- Gmail -->
+                        <a href="mailto:aradanish029@gmail.com" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-black dark:text-white group-hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg role="img" width="30" class=" fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Gmail</title>
+                                <path
+                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                            </svg>
+                        </a>
+                        <!---->
+                        <a href="#" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full hidden justify-center items-center text-black hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg></svg>
+                        </a>
+                        <!--  -->
+                        <a href="#" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full hidden justify-center items-center text-black hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg></svg>
+                        </a>
+                    </div>
+                    <p class=" font-medium text-sm text-slate-700 dark:text-slate-300 leading-normal mb-8 lg:text-lg">
+                        Kirim Pesan Kepada
+                        Saya.</p>
+                    <div
+                        class=" w-[50px] lg:w-[100px] h-[2.5px] lg:h-[4px] block bg-teal-900 dark:bg-yellow-400 m-auto">
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-2/3 lg:mx-auto">
+                <form action="" name="submit-to-google-sheet">
+                    <!-- nama -->
+                    <div class="w-full px-6 mb-8 flex flex-wrap">
+                        <label class="w-1/2 px-2">
+                            <span
+                                class="after:content-['*'] after:ml-0.5 after:text-red-500 text-base font-medium lg:font-semibold text-slate-700 dark:text-slate-300">
+                                Nama Depan
+                            </span>
+                            <input type="namadepan" name="namadepan"
+                                class="mt-1 px-3 py-2 bg-slate-50 dark:border-slate-700 dark:bg-slate-900 border dark:text-white focus:border-teal-900 focus:dark:border-yellow-400 placeholder-slate-500 focus:placeholder-black rounded-sm focus:outline-none focus: w-full sm:text-sm"
+                                placeholder="" />
+                        </label>
+                        <label class="w-1/2 px-2">
+                            <span
+                                class="after:content-['*'] after:ml-0.5 after:text-red-500 text-base font-medium lg:font-semibold text-slate-700 dark:text-slate-300">
+                                Nama Belakang
+                            </span>
+                            <input type="namabelakang" name="namabelakang"
+                                class="mt-1 px-3 py-2 bg-slate-50 dark:border-slate-700 dark:text-white
+                                focus:dark:border-yellow-400 dark:bg-slate-900 border focus:border-teal-900 placeholder-slate-500 focus:placeholder-black rounded-sm focus:outline-none focus: w-full sm:text-sm"
+                                placeholder="" />
+                        </label>
+                    </div>
+                    <!-- email -->
+                    <div class="w-full px-8 mb-8">
+                        <label>
+                            <span
+                                class="after:content-['*'] after:ml-0.5 after:text-red-500 text-base font-medium lg:font-semibold text-slate-700 dark:text-slate-300">
+                                Email
+                            </span>
+                            <input type="email" name="email"
+                                class="mt-1 px-3 py-2 bg-slate-50 dark:border-slate-700 dark:text-white
+                                focus:dark:border-yellow-400 dark:bg-slate-900 border focus:border-teal-900 placeholder-slate-500 focus:placeholder-black rounded-sm focus:outline-none focus: w-full sm:text-sm"
+                                placeholder="kamu@gmail.com" />
+                        </label>
+                    </div>
+                    <!-- pesan -->
+                    <div class="w-full px-8 mb-8">
+                        <label>
+                            <span
+                                class="after:content-['*'] after:ml-0.5 after:text-red-500 text-base font-medium lg:font-semibold text-slate-700 dark:text-slate-300">
+                                Pesan
+                            </span>
+                            <textarea type="pesan" name="pesan"
+                                class="mt-1 px-3 py-2 bg-slate-50 dark:border-slate-700 dark:text-white
+                                focus:dark:border-yellow-400 dark:bg-slate-900 border focus:border-teal-900 placeholder-slate-500 focus:placeholder-black rounded-sm focus:outline-none focus: w-full sm:text-sm h-32"
+                                placeholder="">
+                        </textarea>
+                        </label>
+                    </div>
+                    <div class="w-full px-8 flex">
+                        <button type="submit"
+                            class="bg-teal-900 dark:bg-yellow-400 text-slate-200 dark:text-black hover:dark:text-white text-base font-semibold tracking-widest uppercase py-3 px-8 rounded-sm hover:text-yellow-400 w-1/2 transition duration-200 ease-in-out btn-kirim">
+                            <ion-icon name="send-outline" size="small"></ion-icon> Kirim
+                        </button>
+                        <div class=" px-2">
+                            <div
+                                class="w-full text-black hover:text-yellow-400 dark:text-white px-4 
+                                hover:dark:text-yellow-400 transition duration-300 ease-in-out py-4 text-base uppercase tracking-widest font-bold hidden my-alert">
+                                Berhasil Terkirim <button id="close">
+                                    <ion-icon name="close" size="small" class=" animate-pulse">
+                                    </ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- footer start -->
+    <footer class=" bg-black pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap text-slate-300">
+                <div class="w-full px-2 mb-12 lg:w-1/3">
+                    <h2 class=" font-bold text-4xl tracking-wide text-slate-50 mb-5">AraZaynu</h2>
+                    <h3 class="text-xl lg:text-2xl font-semibold uppercase tracking-wider mb-2">Hubungi Kami</h3>
+                    <p>aradanish029@gmail.com</p>
+                    <p>jl. Gunung Cupu no. 178</p>
+                    <p>Ciamis</p>
+                </div>
+                <div class="w-full px-2 mb-12 text-slate-300 lg:w-1/3">
+                    <h3 class=" text-xl font-semibold tracking-wider uppercase mb-2 lg:text-2xl">Tautan</h3>
+                    <ul>
+                        <li>
+                            <a href="#Hero"
+                                class="inline-block text-sm lg:text-lg hover:underline decoration-yellow-400 transition duration-100 ease-in-out tracking-wider mb-2">
+                                Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#About"
+                                class="inline-block text-sm lg:text-lg hover:underline decoration-yellow-400 transition duration-100 ease-in-out tracking-wider mb-2">
+                                Tentang Saya</a>
+                        </li>
+                        <li>
+                            <a href="#Latest"
+                                class="inline-block text-sm lg:text-lg hover:underline decoration-yellow-400 transition duration-100 ease-in-out tracking-wider mb-2">
+                                Galeri</a>
+                        </li>
+                        <li>
+                            <a href="#Skill"
+                                class="inline-block text-sm lg:text-lg hover:underline decoration-yellow-400 transition duration-100 ease-in-out tracking-wider mb-2">
+                                Skill</a>
+                        </li>
+                        <li>
+                            <a href="#Contact"
+                                class="inline-block text-sm lg:text-lg hover:underline decoration-yellow-400 transition duration-100 ease-in-out tracking-wider mb-2">
+                                Hubungi Saya</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-2 mb-12 text-slate-300 lg:w-1/3">
+                    <h3 class="text-xl font-semibold tracking-wider uppercase mb-2 lg:text-2xl">Ikuti Saya</h3>
+                    <div class="flex">
+                        <!-- instagram -->
+                        <a href="https://www.instagram.com/arazaynu/" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
+                        </a>
+                        <!-- Discord -->
+                        <a href="https://discord.gg/DJmpVW9W" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Discord</title>
+                                <path
+                                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                            </svg>
+                        </a>
+                        <!-- Github -->
+                        <a href="https://github.com/AraZaynu" target="_blank"
+                            class=" w-9 h-9 mr-1 rounded-full flex justify-center items-center text-white hover:text-yellow-400 transition duration-100 ease-in-out">
+                            <svg role="img" width="23" class=" fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>GitHub</title>
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class=" w-[120px] lg:w-[150px] h-[2.5px] lg:h-[4px] block bg-yellow-400 mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full pt-10 border-t-[1px] border-yellow-400">
+            <div class="font-medium text-[0.75rem] text text-slate-50 text-center">
+                <p>Dibuat dengan <span class="text-pink-500">❤</span> oleh <a href="#"
+                        class="font-semibold text-yellow-400"> Danish Ara Zaynu </a> menggunakan <a href="#"
+                        class=" font-semibold text-sky-500"> Tailwind CSS</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- back to top start -->
+    <a href="#Hero" class="fixed bottom-4 right-4 z-[9999] text-yellow-400 hover:animate-bounce" id="to-top">
+        <ion-icon name="arrow-up" size="large"></ion-icon>
+    </a>
+    <!-- back to drop end -->
+
+    <!-- IONSICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- JS -->
+    <script src="dist/js/script.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+        });
+    </script>
+    <!-- Form-Contact -->
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbwV_mFheebcaKyLBRzT5-Wboke2c26f4yl-_C5Ipy8xedwKUZ967WM3KtJS40K_3xxmTg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const Alert = document.querySelector('.my-alert');
+        const btnKirim = document.querySelector('.btn-kirim');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    console.log('Success!', response);
+                    Alert.classList.toggle('hidden');
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+        });
+    </script>
+</body>
+
+</html>
